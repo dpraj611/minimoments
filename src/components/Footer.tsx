@@ -162,9 +162,24 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gold-200 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-gray-500 mb-4 sm:mb-0 font-display">
-            © 2025 Mini Moments Nursery. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-4 sm:mb-0">
+            <p className="text-gray-500 font-display">
+              © 2025 Mini Moments Nursery. All rights reserved.
+            </p>
+            <div className="bg-gradient-to-r from-brand-purple to-purple-600 text-white px-4 py-2 rounded-full shadow-soft hover:shadow-glow transition-all duration-300 hover:scale-105">
+              <p className="text-sm font-display">
+                Developed by{' '}
+                <a
+                  href="https://cyberdhruv.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-gold hover:text-gold-300 font-semibold transition-colors duration-300 underline decoration-brand-gold hover:decoration-gold-300"
+                >
+                  Dhruv Prajapati
+                </a>
+              </p>
+            </div>
+          </div>
           <div className="flex space-x-8">
             <Link
               to="/cookies-policy"
