@@ -3,12 +3,32 @@ import { Camera, Heart, Star, Smile } from 'lucide-react';
 import ContactCTA from '../components/ContactCTA';
 
 const Gallery: React.FC = () => {
-  // Generate array of image paths from p1.jpeg to p54.jpeg
-  const galleryImages = Array.from({ length: 54 }, (_, index) => ({
-    id: index + 1,
-    src: `/p${index + 1}.jpeg`,
-    alt: `Mini Moments Nursery - Image ${index + 1}`
-  }));
+  // Generate array of image paths from p1.jpeg to p62.jpeg (including p55.jpg to p62.jpg)
+  const galleryImages = [
+    // p1.jpeg to p54.jpeg
+    ...Array.from({ length: 54 }, (_, index) => ({
+      id: index + 1,
+      src: `/p${index + 1}.jpeg`,
+      alt: `Mini Moments Nursery - Image ${index + 1}`
+    })),
+    // p55.jpg to p62.jpg
+    ...Array.from({ length: 8 }, (_, index) => ({
+      id: 55 + index,
+      src: `/p${55 + index}.jpg`,
+      alt: `Mini Moments Nursery - Image ${55 + index}`
+    }))
+  ];
+
+  // Create a dynamic layout with varying heights for visual interest
+  const getImageHeight = (index: number) => {
+    const patterns = ['h-64', 'h-80', 'h-72', 'h-96', 'h-60', 'h-88'];
+    return patterns[index % patterns.length];
+  };
+
+  const getImageSpan = (index: number) => {
+    // Occasionally make images span 2 columns for visual variety
+    return (index + 1) % 7 === 0 ? 'md:col-span-2' : '';
+  };
 
   return (
     <div className="py-16 lg:py-24">
@@ -27,24 +47,30 @@ const Gallery: React.FC = () => {
       {/* Gallery Grid */}
       <section className="py-16 bg-gradient-to-br from-purple-50 to-gold-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {/* Masonry-style grid with varying heights */}
+          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
             {galleryImages.map((image, index) => (
               <div
                 key={image.id}
-                className="group relative bg-white rounded-4xl overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-2"
+                className="group relative bg-white rounded-4xl overflow-hidden shadow-soft hover:shadow-glow transition-all duration-500 hover:-translate-y-2 break-inside-avoid mb-6"
                 style={{
                   animationDelay: `${index * 50}ms`
                 }}
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="relative overflow-hidden">
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Floating number badge */}
+                  <div className="absolute top-4 right-4 bg-brand-purple/90 backdrop-blur-sm text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-display font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {image.id}
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>

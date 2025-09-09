@@ -249,9 +249,10 @@ const NurseryTermsConditions: React.FC = () => {
                 and some are eligible for a further 15 hours per week.
               </p>
               <p className="text-gray-700">
-                These funded hours attract a consumables charge which covers meals, snacks, consumables, baking activities, 
-                staff training, etc., and are charged at a rate of £2.80 per funded hour. This charge is reviewed periodically 
-                and in line with the nursery fees.
+                Government-funded hours do not cover the cost of breakfast, hot lunch, afternoon tea, snacks, consumables (such as nappies and creams), or additional activities (such as yoga and meditation). To help cover these services, a <strong><em>voluntary</em></strong> charge of approximately £2.80 per funded hour is applied. This will be itemised on your monthly invoice and is reviewed periodically in line with nursery fees.
+              </p>
+              <p className="text-gray-700 mt-4">
+                For allergy and dietary safety reasons, parents are not able to provide their own food. However, no child will be excluded from accessing their funded entitlement. Families who wish to discuss alternative arrangements are encouraged to speak with the nursery manager.
               </p>
             </div>
           </div>
