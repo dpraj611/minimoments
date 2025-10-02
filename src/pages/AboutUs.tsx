@@ -350,23 +350,23 @@ const AboutUs: React.FC = () => {
               </h3>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  We are here to support not only your child but also you as a parent, offering an 
+                  We are here to support not only your child but also you as a parent, offering an
                   open-door policy and a listening ear whenever you need it.
                 </p>
                 <p>
-                  At Mini Moments, we take pride in offering nutritious meals, beautiful settings, 
+                  At Mini Moments, we take pride in offering nutritious meals, beautiful settings,
                   and a team that is deeply committed to the growth and happiness of your child.
                 </p>
                 <p>
-                  We have worked hard to establish ourselves as one of the most trusted nurseries 
+                  We have worked hard to establish ourselves as one of the most trusted nurseries
                   in the area, and we are honoured to be part of your family's journey.
                 </p>
               </div>
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/8617586/pexels-photo-8617586.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Mini Moments team with children"
+                src="/Nursery Front Image.jpeg"
+                alt="Mini Moments Nursery building"
                 className="rounded-5xl shadow-soft w-full h-96 object-cover"
               />
             </div>

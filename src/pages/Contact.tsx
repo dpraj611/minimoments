@@ -373,7 +373,7 @@ const Contact: React.FC = () => {
 
           <div className="bg-white rounded-4xl shadow-soft overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d397.9990224456063!2d0.3837121!3d51.6703221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8c008c55848cd%3A0x9659b99bb5ca6451!2sCranwell%20House%2C%20102%20High%20St%2C%20Ingatestone%20CM4%200BA%2C%20UK!5e1!3m2!1sen!2sin!4v1750143301859!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2268.103944867899!2d0.3841828!3d51.6704139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8c15f6e5e73d7%3A0x2239318ad39f19b2!2sMini%20Moments%20Nursery!5e0!3m2!1sen!2suk!4v1727875200000!5m2!1sen!2suk"
               width="100%"
               height="450"
               style={{ border: 0 }}
