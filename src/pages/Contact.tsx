@@ -9,17 +9,21 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
+    formData.append("access_key", "11a7db19-9a62-478d-9a01-562117c56768");
+
     try {
-      const response = await fetch('https://getform.io/f/anlxkvra', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData,
       });
-      
-      if (response.ok) {
+
+      const data = await response.json();
+
+      if (data.success) {
         setSubmitStatus('success');
         form.reset();
       } else {
@@ -208,14 +212,10 @@ const Contact: React.FC = () => {
                 </div>
               )}
               
-              <form 
-                action="https://getform.io/f/anlxkvra" 
-                method="POST" 
+              <form
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                {/* Honeypot field to prevent spam */}
-                <input type="hidden" name="_gotcha" style={{ display: 'none !important' }} />
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -372,18 +372,16 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-4xl shadow-soft overflow-hidden">
-            <div className="aspect-video bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-display font-semibold text-gray-600 mb-2">Interactive Map</h3>
-                <p className="text-gray-500">
-                  102 High Street, Ingatestone, CM4 0BA
-                </p>
-                <p className="text-sm text-gray-400 mt-2">
-                  Map integration would be implemented here
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d397.9990224456063!2d0.3837121!3d51.6703221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8c008c55848cd%3A0x9659b99bb5ca6451!2sCranwell%20House%2C%20102%20High%20St%2C%20Ingatestone%20CM4%200BA%2C%20UK!5e1!3m2!1sen!2sin!4v1750143301859!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Mini Moments Nursery Location"
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">

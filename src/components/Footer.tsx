@@ -96,6 +96,16 @@ const Footer: React.FC = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://myclothing.com/collections/mini-moments-nursery-29690"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-brand-purple transition-all duration-300 font-display"
+                >
+                  Order Uniforms
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -55,15 +55,24 @@ const Home: React.FC = () => {
               <div className="flex items-center justify-center lg:justify-start space-x-8 pt-8">
                 <div className="text-center">
                   <div className="bg-white/20 backdrop-blur-sm rounded-4xl p-4 mb-2">
-                    <img 
-                      src="/NDNA-member-logo-with-lozenge-for-coloured-backgro-1-2-300x149.png" 
-                      alt="NDNA Member" 
+                    <img
+                      src="/NDNA-member-logo-with-lozenge-for-coloured-backgro-1-2-300x149.png"
+                      alt="NDNA Member"
                       className="h-8 w-auto mx-auto"
                     />
                   </div>
                   <p className="text-sm font-display font-medium text-purple-200">NDNA Member</p>
                 </div>
-               
+                <div className="text-center">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-4xl p-4 mb-2">
+                    <img
+                      src="/Citation-T-1024x341.png"
+                      alt="HSE Partner"
+                      className="h-8 w-auto mx-auto"
+                    />
+                  </div>
+                  <p className="text-sm font-display font-medium text-purple-200">HSE Partner</p>
+                </div>
               </div>
             </div>
             

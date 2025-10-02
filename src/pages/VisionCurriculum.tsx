@@ -282,7 +282,7 @@ const VisionCurriculum: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/8617586/pexels-photo-8617586.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/8613362/pexels-photo-8613362.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Children engaged in mindful play and learning"
                 className="rounded-5xl shadow-soft w-full h-96 object-cover"
               />
